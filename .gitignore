@@ -1,0 +1,7 @@
+.env
+.env.local
+.DS_Store
+.idea/
+*.iml
+
+# Mantemos .cursor/rules e .cursor/skills no Git (workflow do projeto)

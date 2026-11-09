@@ -1,0 +1,16 @@
+---
+description: Specs aprovadas — escopo e cenários antes de codar
+globs: specs/**/*
+alwaysApply: false
+---
+
+# Specs
+
+- Uma feature = um arquivo `specs/YYYY-MM-DD-slug.md`
+- Status: `draft` → `aprovada` → `em_implementacao` → `done`
+- Cenários em linguagem de domínio (Dado/Quando/Então), não leakage de classe Java
+- Seção **Escopo de arquivos permitido** obrigatória
+- Agente **não implementa** com Spec em `draft`
+- Alterar Spec `aprovada`/`done` só com pedido explícito do Ivan
+
+Template: `specs/TEMPLATE-feature.md`

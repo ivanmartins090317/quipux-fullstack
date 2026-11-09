@@ -1,0 +1,33 @@
+---
+description: React/Vite — UI da prova, API, sessão JWT
+globs: frontend/**/*
+alwaysApply: false
+---
+
+# Frontend React (prova Quipux)
+
+## Padrões
+
+- Componentes funcionais, exports nomeados
+- Tipos em `types.ts`; HTTP centralizado em `api.ts`
+- Token em `sessionStorage` (`quipux.token`); header `Authorization: Bearer`
+- Dev: proxy em `vite.config.ts` para `localhost:8080` (sem CORS)
+
+## UX da prova
+
+- Cadastro e lista públicos; exclusão e nacionalidade exigem login
+- Erros da API: `ApiError` com `message` e `fields` do back
+- Excluir: confirmação em dois cliques
+
+## Não fazer
+
+- Nova lib de estado global para esta prova
+- Chamar URL absoluta da API no dev (quebraria proxy)
+- Hardcode de segredo no front
+
+## Verificar
+
+```powershell
+cd frontend
+npm run build
+```

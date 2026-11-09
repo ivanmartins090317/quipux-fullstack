@@ -1,0 +1,20 @@
+---
+description: Workflow AI-native (research → spec aprovada → implementar → docs vivos → done)
+alwaysApply: true
+---
+
+# Workflow AI-native · Quipux
+
+Siga `AGENTS.md`. Em feature nova ou mudança de comportamento:
+
+1. Não comece pelo código.
+2. Research + plano curto (`prompts/01`, `prompts/02`).
+3. Spec em `specs/` com status `draft` → pedir aprovação → só então `aprovada`.
+4. Implementar apenas o escopo da Spec (`prompts/04-implementar.md`).
+5. Back: respeitar `domain` → `application` → `infra`. Front: chamadas via `frontend/src/api.ts`.
+6. Paths críticos (auth, yml, pom, `.env*`) = autonomia **tight**.
+7. Antes de Done: rodar `backend/mvnw.cmd test` e `frontend/npm run build`.
+8. Fechar fase com skill `close-phase` (implementation, manual-dev, PENDENCIAS).
+9. Reportar no formato de `AGENTS.md`.
+
+Não renomear rotas do enunciado. Grafia `findNacionalityByPerson` é intencional.

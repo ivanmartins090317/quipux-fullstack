@@ -1,0 +1,40 @@
+---
+description: Spring Boot — camadas, validação, erros, testes
+globs: backend/**/*
+alwaysApply: false
+---
+
+# Backend Java (prova Quipux)
+
+## Camadas
+
+- `domain`: records, exceções sem HTTP
+- `application`: ports + `@Service` use cases (sem anotações JPA)
+- `infra`: controllers, DTOs + Bean Validation, JPA, Security, RestClient
+
+Controller → use case → port. Tratamento HTTP em `GlobalExceptionHandler`.
+
+## REST
+
+- UUID no path: Spring converte; 400 via `MethodArgumentTypeMismatchException`
+- DTO no POST; não expor `PersonEntity` no JSON
+- Status: 201 cadastro, 204 delete, 401 auth, 404 not found, 409 documento duplicado, 502 nationalize
+
+## Segurança
+
+Regras em `SecurityConfig`, não só `@SecurityRequirement` do Swagger.
+JWT só em `DELETE /list/*` e `GET /findNacionalityByPerson/*`.
+
+## Testes
+
+- Regra de negócio: teste de use case sem Spring (`ApplicationUseCasesTest`)
+- HTTP: `PersonApiIntegrationTest` com `@MockitoBean NationalityClient`
+
+## Verificar
+
+```powershell
+cd backend
+.\mvnw.cmd test
+```
+
+Parent POM: `4.1.2` (sem sufixo `.RELEASE`).

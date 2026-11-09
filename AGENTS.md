@@ -2,7 +2,7 @@
 
 Constituição do monorepo para agentes de IA. Alterar só com aprovação explícita do Ivan.
 
-Spec **F08** / primeiro commit do repositório: estrutura LLM (este arquivo, rules, prompts, docs vivos).
+Spec **F0** / primeiro commit do repositório: estrutura LLM (este arquivo, rules, prompts, docs vivos).
 
 ## Stack
 

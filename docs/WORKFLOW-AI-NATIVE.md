@@ -15,7 +15,7 @@ Kit adaptado de `10 Dev/Referencias/workflow-ai-native`.
 
 ## Fluxo
 
-0. **F08 primeiro** no Git (workflow + AGENTS) → depois specs → depois código.
+0. **F0 primeiro** no Git (workflow + AGENTS) → depois specs → depois código.
 1. Research → Plano → Spec **aprovada** → Implementar → Docs vivos → Verificar Done.
 
 ## Fase atual

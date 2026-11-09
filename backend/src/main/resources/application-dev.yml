@@ -1,0 +1,23 @@
+# Perfil local. Banco em arquivo, sem Neon. Credencial abaixo é de demonstração.
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/prova;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+app:
+  security:
+    username: avaliador
+    password: quipux-demo
+    jwt-secret: dev-only-secret-change-me-32chars-min
+    jwt-expiration-minutes: 120
+  cors:
+    allowed-origins: http://localhost:5173

@@ -1,6 +1,6 @@
 # Spec: MVP enunciado Quipux
 
-Umbrella spec. Feature slices: see [README.md](./README.md) (F01–F08).
+Umbrella spec. Feature slices: see [README.md](./README.md) (F0, F01–F07).
 
 - Status: `done`
 - Data: 2026-11-09

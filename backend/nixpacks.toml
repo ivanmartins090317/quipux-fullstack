@@ -1,0 +1,3 @@
+# Spring Boot 4 / Java 21 — Nixpacks default é JDK 17.
+[variables]
+NIXPACKS_JDK_VERSION = "21"

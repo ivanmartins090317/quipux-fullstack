@@ -5,6 +5,6 @@ NIXPACKS_JDK_VERSION = "21"
 builder = "nixpacks"
 buildCommand = "chmod +x ./mvnw && bash ./mvnw -DskipTests clean package"
 
+# Sem startCommand: Dockerfile usa CMD (app.jar). Nixpacks usa java -jar target/*.jar.
 [deploy]
-startCommand = "java -jar target/prova-0.0.1-SNAPSHOT.jar"
 restartPolicyType = "ON_FAILURE"

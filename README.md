@@ -2,6 +2,18 @@
 
 Cadastro de pessoas em Java (Spring Boot) com interface React. O parâmetro das rotas `/list/{id}` e `/findNacionalityByPerson/{id}` é um UUID.
 
+## Entrega (demo online)
+
+| Item | Link |
+| --- | --- |
+| Repositório | https://github.com/ivanmartins090317/quipux-fullstack |
+| Interface (Vercel) | https://quipux-fullstack-oa65.vercel.app |
+| API / Swagger | https://quipux-fullstack-production.up.railway.app/swagger-ui.html |
+
+Login para **exclusão** e **nacionalidade** (local e nuvem): usuário `avaliador`, senha `quipux-demo`.
+
+Cadastro e listagem são públicos. JWT só em `DELETE /list/{id}` e `GET /findNacionalityByPerson/{id}`.
+
 ## Como rodar
 
 Pré-requisitos: Java 21 e Node 22+.
@@ -36,7 +48,7 @@ $env:DATABASE_URL = "jdbc:postgresql://HOST/neondb?sslmode=require"
 $env:DATABASE_USERNAME = "..."
 $env:DATABASE_PASSWORD = "..."
 $env:AUTH_USERNAME = "avaliador"
-$env:AUTH_PASSWORD = "..."
+$env:AUTH_PASSWORD = "quipux-demo"
 $env:JWT_SECRET = "um-segredo-com-pelo-menos-32-bytes"
 cd backend
 .\mvnw.cmd spring-boot:run
